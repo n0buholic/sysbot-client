@@ -1,1 +1,1 @@
-Sysbot.PW Client
+Sysbot Client
