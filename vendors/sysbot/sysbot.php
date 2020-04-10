@@ -6,7 +6,7 @@ class Sysbot {
         $this->domain = 'http://sysbot.pw';
     }
 
-    private function get_client_ip() {
+    private function getClientIP() {
         $ipaddress = '';
         if (getenv('HTTP_CLIENT_IP')) {
             $ipaddress = getenv('HTTP_CLIENT_IP');
@@ -46,13 +46,9 @@ class Sysbot {
         $ipAddress = $this->get_client_ip();
         $userAgent = urlencode($_SERVER['HTTP_USER_AGENT']);
         $url = "$domain/skuy?ipAddress=$ipAddress&shortCode=$shortCode&userAgent=$userAgent";
-        $respons = $this->httpGet($url);
+        $response = $this->httpGet($url);
 
-        return $respons;
-    }
-
-    public function json($respons) {
-        return json_decode($respons);
+        return $response;
     }
 
     public function showError($code) {
