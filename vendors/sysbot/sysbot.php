@@ -43,7 +43,7 @@ class Sysbot {
 
     public function redirect($shortCode) {
         $domain = $this->domain;
-        $ipAddress = $this->get_client_ip();
+        $ipAddress = $this->getClientIP();
         $userAgent = urlencode($_SERVER['HTTP_USER_AGENT']);
         $url = "$domain/skuy?ipAddress=$ipAddress&shortCode=$shortCode&userAgent=$userAgent";
         $response = $this->httpGet($url);
