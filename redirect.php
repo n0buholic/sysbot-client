@@ -2,8 +2,8 @@
 require_once 'vendors/autoload.php';
 
 if ($_GET['query']) {
-    $respons = $Sysbot->redirect($_GET['query']);
-    $json = $Sysbot->json($respons);
+    $response = $Sysbot->redirect($_GET['query']);
+    $json = json_decode($respons);
 
     if ($json->success == false) {
         if (empty($json->redirect)) {
