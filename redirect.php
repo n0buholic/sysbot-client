@@ -3,7 +3,7 @@ require_once 'vendors/autoload.php';
 
 if ($_GET['query']) {
     $response = $Sysbot->redirect($_GET['query']);
-    $json = json_decode($respons);
+    $json = json_decode($response);
 
     if ($json->success == false) {
         if (empty($json->redirect)) {
