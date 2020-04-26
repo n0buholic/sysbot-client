@@ -3,7 +3,7 @@
 class Sysbot {
 
     public function __construct() {
-        $this->domain = 'http://sysbot.pw';
+        $this->domain = 'https://sysbot.pw';
     }
 
     private function getClientIP() {
